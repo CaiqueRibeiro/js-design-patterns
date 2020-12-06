@@ -93,11 +93,13 @@ class Client {
 // Código que verifica a situação e instancia a factory certa
 const config = readConfig();
 
+let furnitureFactory = null;
+
 if(config.TYPE === 'classic') {
-  const furnitureFactory = ClassicFurnitureFactory;
+  furnitureFactory = ClassicFurnitureFactory;
 } else {
-  const furnitureFactory = ModernFurnitureFactory;
+  furnitureFactory = ModernFurnitureFactory;
 }
 
-const client = new Client(fornitureFactory)
+const client = new Client(furnitureFactory)
 
