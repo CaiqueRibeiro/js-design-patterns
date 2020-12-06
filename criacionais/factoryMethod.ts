@@ -31,7 +31,7 @@ class CriadorConcreto2 extends Criador {
   public factoryMethod() {
       // sobrescrevendo o método abstrato (obrigatório)
 
-    return new ProdutoConcreto1();
+    return new ProdutoConcreto2();
   }  
 }
 
